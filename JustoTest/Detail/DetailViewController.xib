@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="JustoTest" customModuleProvider="target">
+            <connections>
+                <outlet property="fullName" destination="QGu-qI-6ye" id="Wb7-lV-Dnx"/>
+                <outlet property="imgProfile" destination="5n8-TR-vhL" id="1Di-Uz-b6O"/>
+                <outlet property="personalInfo" destination="mlc-kE-Tej" id="s4o-cR-sJs"/>
+                <outlet property="resume" destination="xZo-D3-Ipu" id="xJe-0D-9Be"/>
+                <outlet property="stackView" destination="u4F-YN-ohr" id="jSD-6Y-J10"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5n8-TR-vhL">
+                    <rect key="frame" x="124" y="94" width="166" height="165.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="5n8-TR-vhL" secondAttribute="height" id="Mho-NK-WbX"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u4F-YN-ohr">
+                    <rect key="frame" x="41.5" y="309.5" width="331" height="169.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGu-qI-6ye">
+                            <rect key="frame" x="0.0" y="0.0" width="331" height="26.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlc-kE-Tej">
+                            <rect key="frame" x="0.0" y="36.5" width="331" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZo-D3-Ipu">
+                            <rect key="frame" x="0.0" y="67" width="331" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmD-eC-acR">
+                            <rect key="frame" x="0.0" y="97.5" width="331" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Llamar"/>
+                            <connections>
+                                <action selector="btnCallAction:" destination="-1" eventType="touchUpInside" id="CAW-h3-vYD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3Z-8A-x06">
+                            <rect key="frame" x="0.0" y="138.5" width="331" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Enviar Correo"/>
+                            <connections>
+                                <action selector="btnSendEmail:" destination="-1" eventType="touchUpInside" id="5Ay-Pp-Mh8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5n8-TR-vhL" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4Am-pI-S6z"/>
+                <constraint firstItem="u4F-YN-ohr" firstAttribute="top" secondItem="5n8-TR-vhL" secondAttribute="bottom" constant="50" id="6rJ-Lc-dWm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="u4F-YN-ohr" secondAttribute="bottom" constant="20" id="72i-Re-rQV"/>
+                <constraint firstItem="u4F-YN-ohr" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="OyQ-fm-rpi"/>
+                <constraint firstItem="5n8-TR-vhL" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="V4d-IX-KFT"/>
+                <constraint firstItem="u4F-YN-ohr" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.8" id="VuH-8f-TRt"/>
+                <constraint firstItem="5n8-TR-vhL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="dbt-yg-O8c"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="50"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

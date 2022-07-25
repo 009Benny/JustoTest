@@ -13,10 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let navigation = UINavigationController()
-        navigation.viewControllers = [HomeRouter.buildModule()]
-        window?.rootViewController = navigation
-        window?.makeKeyAndVisible()
+        if let window = window{
+            AppDelegate.startNavigationController(window)
+        }
         return true
     }
 
@@ -32,6 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    static func startNavigationController(_ window:UIWindow){
+        let navigation = UINavigationController()
+        navigation.navigationBar.tintColor = .white
+        navigation.navigationBar.backgroundColor = UIColor(named: "JustoColor")
+        navigation.viewControllers = [HomeRouter.buildModule()]
+        window.rootViewController = navigation
+        window.makeKeyAndVisible()
     }
 
 

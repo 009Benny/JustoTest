@@ -13,9 +13,6 @@
 		1780774D288A5DE400BDCF5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1780774B288A5DE400BDCF5C /* Main.storyboard */; };
 		1780774F288A5DE400BDCF5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1780774E288A5DE400BDCF5C /* Assets.xcassets */; };
 		17807752288A5DE400BDCF5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17807750288A5DE400BDCF5C /* LaunchScreen.storyboard */; };
-		1780775D288A5DE500BDCF5C /* JustoTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780775C288A5DE500BDCF5C /* JustoTestTests.swift */; };
-		17807767288A5DE500BDCF5C /* JustoTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17807766288A5DE500BDCF5C /* JustoTestUITests.swift */; };
-		17807769288A5DE500BDCF5C /* JustoTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17807768288A5DE500BDCF5C /* JustoTestUITestsLaunchTests.swift */; };
 		1780777A288A6BC100BDCF5C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17807778288A6BC100BDCF5C /* HomeViewController.swift */; };
 		1780777D288A6BCE00BDCF5C /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780777C288A6BCE00BDCF5C /* HomeProtocols.swift */; };
 		1780777F288A6C8300BDCF5C /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780777E288A6C8300BDCF5C /* HomeRouter.swift */; };
@@ -27,6 +24,8 @@
 		17807792288B07B800BDCF5C /* MessagesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17807791288B07B800BDCF5C /* MessagesStore.swift */; };
 		178077D1288B64C600BDCF5C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178077CF288B64C600BDCF5C /* DetailViewController.swift */; };
 		178077D2288B64C600BDCF5C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 178077D0288B64C600BDCF5C /* DetailViewController.xib */; };
+		17890981288DAB60009ECD9E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17890980288DAB60009ECD9E /* UIViewControllerExtension.swift */; };
+		17890983288E359C009ECD9E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17890982288E359C009ECD9E /* UIColorExtension.swift */; };
 		3F080C187016C583D3FF8F0A /* Pods_JustoTest_JustoTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FF199D6516CD7DBA9BE22D /* Pods_JustoTest_JustoTestUITests.framework */; };
 		C916A0E3449F454DF8AD4CED /* Pods_JustoTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593D30ECD56724D0C6EEC49E /* Pods_JustoTestTests.framework */; };
 		C939D80C58D958E4DDF046E6 /* Pods_JustoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E0515EEBD28E068C7EC649 /* Pods_JustoTest.framework */; };
@@ -60,10 +59,7 @@
 		17807751288A5DE400BDCF5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17807753288A5DE400BDCF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17807758288A5DE500BDCF5C /* JustoTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustoTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1780775C288A5DE500BDCF5C /* JustoTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustoTestTests.swift; sourceTree = "<group>"; };
 		17807762288A5DE500BDCF5C /* JustoTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustoTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17807766288A5DE500BDCF5C /* JustoTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustoTestUITests.swift; sourceTree = "<group>"; };
-		17807768288A5DE500BDCF5C /* JustoTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustoTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		17807778288A6BC100BDCF5C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		1780777C288A6BCE00BDCF5C /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		1780777E288A6C8300BDCF5C /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -75,6 +71,8 @@
 		17807791288B07B800BDCF5C /* MessagesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesStore.swift; sourceTree = "<group>"; };
 		178077CF288B64C600BDCF5C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		178077D0288B64C600BDCF5C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		17890980288DAB60009ECD9E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		17890982288E359C009ECD9E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1A0892993E738CBC80464051 /* Pods-JustoTest-JustoTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustoTest-JustoTestUITests.release.xcconfig"; path = "Target Support Files/Pods-JustoTest-JustoTestUITests/Pods-JustoTest-JustoTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		37C04C25AFD3652E89FDAD51 /* Pods-JustoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustoTest.debug.xcconfig"; path = "Target Support Files/Pods-JustoTest/Pods-JustoTest.debug.xcconfig"; sourceTree = "<group>"; };
 		45E0515EEBD28E068C7EC649 /* Pods_JustoTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustoTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,8 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				17807744288A5DE400BDCF5C /* JustoTest */,
-				1780775B288A5DE500BDCF5C /* JustoTestTests */,
-				17807765288A5DE500BDCF5C /* JustoTestUITests */,
 				17807743288A5DE400BDCF5C /* Products */,
 				376551E03F0701751CEDA22A /* Pods */,
 				4AFC9B1853F4AB32C29E61A4 /* Frameworks */,
@@ -152,23 +148,6 @@
 			path = JustoTest;
 			sourceTree = "<group>";
 		};
-		1780775B288A5DE500BDCF5C /* JustoTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				1780775C288A5DE500BDCF5C /* JustoTestTests.swift */,
-			);
-			path = JustoTestTests;
-			sourceTree = "<group>";
-		};
-		17807765288A5DE500BDCF5C /* JustoTestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				17807766288A5DE500BDCF5C /* JustoTestUITests.swift */,
-				17807768288A5DE500BDCF5C /* JustoTestUITestsLaunchTests.swift */,
-			);
-			path = JustoTestUITests;
-			sourceTree = "<group>";
-		};
 		17807775288A620D00BDCF5C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +173,7 @@
 		17807786288A73E500BDCF5C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1789097D288DA5C4009ECD9E /* Extensions */,
 				17807787288A73F600BDCF5C /* SpinnerView.swift */,
 				17807791288B07B800BDCF5C /* MessagesStore.swift */,
 			);
@@ -215,6 +195,15 @@
 				1780778D288AEACC00BDCF5C /* UserTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1789097D288DA5C4009ECD9E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				17890980288DAB60009ECD9E /* UIViewControllerExtension.swift */,
+				17890982288E359C009ECD9E /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		376551E03F0701751CEDA22A /* Pods */ = {
@@ -482,6 +471,8 @@
 			files = (
 				178077D1288B64C600BDCF5C /* DetailViewController.swift in Sources */,
 				1780774A288A5DE400BDCF5C /* ViewController.swift in Sources */,
+				17890983288E359C009ECD9E /* UIColorExtension.swift in Sources */,
+				17890981288DAB60009ECD9E /* UIViewControllerExtension.swift in Sources */,
 				17807783288A6CA100BDCF5C /* HomeEntity.swift in Sources */,
 				1780778F288AEACC00BDCF5C /* UserTableViewCell.swift in Sources */,
 				1780777F288A6C8300BDCF5C /* HomeRouter.swift in Sources */,
@@ -500,7 +491,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1780775D288A5DE500BDCF5C /* JustoTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,8 +498,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17807769288A5DE500BDCF5C /* JustoTestUITestsLaunchTests.swift in Sources */,
-				17807767288A5DE500BDCF5C /* JustoTestUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

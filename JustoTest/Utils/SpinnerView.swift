@@ -11,11 +11,13 @@ class SpinnerViewController:UIViewController{
     
     override func loadView() {
         view = UIView()
-        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        view.backgroundColor = UIColor.white
 
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.translatesAutoresizingMaskIntoConstraints = false
         spinner.color = .white
+        spinner.tintColor = .white
+        spinner.backgroundColor = .white
         spinner.startAnimating()
         view.addSubview(spinner)
 

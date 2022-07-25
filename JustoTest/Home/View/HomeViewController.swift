@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController, HomeViewProtocol {
+final class HomeViewController: UITableViewController, HomeViewProtocol {
     var presenter: HomePresenterProtocol?
     var spinner = UIActivityIndicatorView(style: .large)
     var users:[User] = [] {
@@ -16,15 +16,27 @@ class HomeViewController: UITableViewController, HomeViewProtocol {
         }
     }
     
+    private lazy var topView:UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .purple
+//        view.backgroundColor = navigationController?.navigationBar.backgroundColor
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        presenter?.loadData()
     }
     
     func configUI(){
         title = "Lista de personas"
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.prefersLargeTitles = true
-        presenter?.loadData()
+        tableView.backgroundColor = navigationController?.navigationBar.backgroundColor
         tableView.rowHeight = 60
         tableView.register(UserCell.self, forCellReuseIdentifier: UserCell.identifier)
     }
@@ -72,5 +84,5 @@ class HomeViewController: UITableViewController, HomeViewProtocol {
         })
         self.present(alert, animated: true, completion: nil)
     }
-                         
+    
 }

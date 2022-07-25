@@ -15,9 +15,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var personalInfo: UILabel!
     @IBOutlet weak var resume: UILabel!
     @IBOutlet weak var stackView: UIStackView!
-    
-    
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var gradientView: UIView?
     let user:User
+    
+    private lazy var topView:UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = navigationController?.navigationBar.backgroundColor
+        return view
+    }()
     
     init(user:User) {
         self.user = user
@@ -28,18 +35,37 @@ class DetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let gradient = gradientView{
+            configGradientBackground(to: gradient)
+        }
+    }
+    //
+    
     func configUI(){
         title = "Perfil de \(user.name)"
-        stackView.setCustomSpacing(20, after: resume)
         
+        view.addSubview(topView)
+        topView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        topView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        topView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        topView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor).isActive = true
+        
+        cardView.layer.cornerRadius = 20
+        cardView.clipsToBounds = true
+        
+        stackView.setCustomSpacing(20, after: resume)
         imgProfile.layer.cornerRadius = imgProfile.bounds.width / 2
         imgProfile.clipsToBounds = true
-        
+    
+        // SET CUSTOM DATA
         load(image: user.profilePicture.large)
         fullName.text = user.fullName
         personalInfo.text = "\(user.nationality) - \(user.age) años"

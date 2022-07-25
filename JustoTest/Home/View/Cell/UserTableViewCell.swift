@@ -47,6 +47,7 @@ class UserCell: UITableViewCell {
     
     private func configureUI() {
         selectionStyle = .none
+        backgroundColor = UIColor.systemBackground
         
         let stack = UIStackView(arrangedSubviews: [fullName, basicInformation])
         stack.spacing = 8
@@ -63,8 +64,6 @@ class UserCell: UITableViewCell {
         image.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
         image.layer.cornerRadius = width / 2
         image.clipsToBounds = true
-        
-        
         
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true

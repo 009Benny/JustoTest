@@ -11,6 +11,9 @@ import Alamofire
 class HomeInteractor: HomeInteractorProtocol {
     weak var presenter: HomePresenterProtocol?
     
+    // This method consume randomuser service that have information
+    // to random users, and we send like parameter a number of specific
+    // cant of user that I request
     func getUsers(cant:Int, completition: @escaping ServiceCompletition) {
         let url = "https://randomuser.me/api/?results=\(cant)"
         AF.request(url).responseDecodable(of: UserResponse.self) { response in

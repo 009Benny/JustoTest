@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 class UserCell: UITableViewCell {
-    static let identifier = String(describing: self)
+    static let identifier = String(describing: UserCell.self)
     var user:User? { didSet { updateData() } }
     
     private let fullName: UILabel = {
@@ -35,7 +35,7 @@ class UserCell: UITableViewCell {
     }()
     
     
-    // MARK: Lifecycle
+    // MARK: LIFE CYCLE
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configureUI()
@@ -71,7 +71,7 @@ class UserCell: UITableViewCell {
         stack.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: 20).isActive = true
     }
     
-    // MARK: UpdateData
+    // MARK: UPDATE DATA
     func updateData(){
         guard let usr = user else { return }
         fullName.text = usr.fullName

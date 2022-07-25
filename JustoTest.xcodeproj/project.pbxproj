@@ -19,13 +19,13 @@
 		17807781288A6C9100BDCF5C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17807780288A6C9100BDCF5C /* HomeInteractor.swift */; };
 		17807783288A6CA100BDCF5C /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17807782288A6CA100BDCF5C /* HomeEntity.swift */; };
 		17807785288A702D00BDCF5C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17807784288A702D00BDCF5C /* HomePresenter.swift */; };
-		17807788288A73F600BDCF5C /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17807787288A73F600BDCF5C /* SpinnerView.swift */; };
 		1780778F288AEACC00BDCF5C /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780778D288AEACC00BDCF5C /* UserTableViewCell.swift */; };
 		17807792288B07B800BDCF5C /* MessagesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17807791288B07B800BDCF5C /* MessagesStore.swift */; };
 		178077D1288B64C600BDCF5C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178077CF288B64C600BDCF5C /* DetailViewController.swift */; };
 		178077D2288B64C600BDCF5C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 178077D0288B64C600BDCF5C /* DetailViewController.xib */; };
 		17890981288DAB60009ECD9E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17890980288DAB60009ECD9E /* UIViewControllerExtension.swift */; };
 		17890983288E359C009ECD9E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17890982288E359C009ECD9E /* UIColorExtension.swift */; };
+		1792AE4C288F19DB0048C0A4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1792AE4B288F19DB0048C0A4 /* StringExtension.swift */; };
 		3F080C187016C583D3FF8F0A /* Pods_JustoTest_JustoTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FF199D6516CD7DBA9BE22D /* Pods_JustoTest_JustoTestUITests.framework */; };
 		C916A0E3449F454DF8AD4CED /* Pods_JustoTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593D30ECD56724D0C6EEC49E /* Pods_JustoTestTests.framework */; };
 		C939D80C58D958E4DDF046E6 /* Pods_JustoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E0515EEBD28E068C7EC649 /* Pods_JustoTest.framework */; };
@@ -66,13 +66,13 @@
 		17807780288A6C9100BDCF5C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		17807782288A6CA100BDCF5C /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		17807784288A702D00BDCF5C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		17807787288A73F600BDCF5C /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		1780778D288AEACC00BDCF5C /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		17807791288B07B800BDCF5C /* MessagesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesStore.swift; sourceTree = "<group>"; };
 		178077CF288B64C600BDCF5C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		178077D0288B64C600BDCF5C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		17890980288DAB60009ECD9E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		17890982288E359C009ECD9E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1792AE4B288F19DB0048C0A4 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1A0892993E738CBC80464051 /* Pods-JustoTest-JustoTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustoTest-JustoTestUITests.release.xcconfig"; path = "Target Support Files/Pods-JustoTest-JustoTestUITests/Pods-JustoTest-JustoTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		37C04C25AFD3652E89FDAD51 /* Pods-JustoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustoTest.debug.xcconfig"; path = "Target Support Files/Pods-JustoTest/Pods-JustoTest.debug.xcconfig"; sourceTree = "<group>"; };
 		45E0515EEBD28E068C7EC649 /* Pods_JustoTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustoTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				1789097D288DA5C4009ECD9E /* Extensions */,
-				17807787288A73F600BDCF5C /* SpinnerView.swift */,
 				17807791288B07B800BDCF5C /* MessagesStore.swift */,
 			);
 			path = Utils;
@@ -202,6 +201,7 @@
 			children = (
 				17890980288DAB60009ECD9E /* UIViewControllerExtension.swift */,
 				17890982288E359C009ECD9E /* UIColorExtension.swift */,
+				1792AE4B288F19DB0048C0A4 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -471,6 +471,7 @@
 			files = (
 				178077D1288B64C600BDCF5C /* DetailViewController.swift in Sources */,
 				1780774A288A5DE400BDCF5C /* ViewController.swift in Sources */,
+				1792AE4C288F19DB0048C0A4 /* StringExtension.swift in Sources */,
 				17890983288E359C009ECD9E /* UIColorExtension.swift in Sources */,
 				17890981288DAB60009ECD9E /* UIViewControllerExtension.swift in Sources */,
 				17807783288A6CA100BDCF5C /* HomeEntity.swift in Sources */,
@@ -479,7 +480,6 @@
 				1780777D288A6BCE00BDCF5C /* HomeProtocols.swift in Sources */,
 				17807746288A5DE400BDCF5C /* AppDelegate.swift in Sources */,
 				17807748288A5DE400BDCF5C /* SceneDelegate.swift in Sources */,
-				17807788288A73F600BDCF5C /* SpinnerView.swift in Sources */,
 				17807785288A702D00BDCF5C /* HomePresenter.swift in Sources */,
 				1780777A288A6BC100BDCF5C /* HomeViewController.swift in Sources */,
 				17807781288A6C9100BDCF5C /* HomeInteractor.swift in Sources */,

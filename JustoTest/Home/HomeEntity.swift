@@ -70,6 +70,7 @@ struct User:Decodable{
     
 }
 
+// Rest of the structs is only to decode data
 struct NameModel:Decodable{
     let title:String
     let first:String

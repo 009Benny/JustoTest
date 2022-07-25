@@ -14,7 +14,7 @@ protocol HomeWireframeProtocol: AnyObject {
 
 //MARK: Presenter -
 protocol HomePresenterProtocol: AnyObject {
-    func loadData()
+    func loadData(refresh:Bool)
     func showDetail(of user:User)
 }
 
@@ -30,6 +30,7 @@ protocol HomeViewProtocol: AnyObject {
     var presenter: HomePresenterProtocol?  { get set }
     var users:[User] { get set }
     
+    func endRefresh()
     func showSpinner()
     func removeSpinner()
     func showAlertMessage(_ message:String, title:String)

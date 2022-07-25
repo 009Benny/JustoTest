@@ -7,29 +7,38 @@
 
 import UIKit
 
+// This class will show a list with random people
 final class HomeViewController: UITableViewController, HomeViewProtocol {
     var presenter: HomePresenterProtocol?
-    var spinner = UIActivityIndicatorView(style: .large)
     var users:[User] = [] {
         didSet{
             tableView.reloadData()
+            tableView.refreshControl?.endRefreshing()
         }
     }
+    
+    private lazy var spinner:UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .large)
+        view.tintColor = .white
+        view.color = .white
+        return view
+    }()
     
     private lazy var topView:UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .purple
-//        view.backgroundColor = navigationController?.navigationBar.backgroundColor
         return view
     }()
     
+    // MARK: LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-        presenter?.loadData()
+        presenter?.loadData(refresh: false)
     }
     
+    // MARK: CONFIG UI
     func configUI(){
         title = "Lista de personas"
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
@@ -39,6 +48,19 @@ final class HomeViewController: UITableViewController, HomeViewProtocol {
         tableView.backgroundColor = navigationController?.navigationBar.backgroundColor
         tableView.rowHeight = 60
         tableView.register(UserCell.self, forCellReuseIdentifier: UserCell.identifier)
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl!)
+    }
+    
+    // MARK: REFRESH METHODS
+    @objc func refresh(){
+        tableView.refreshControl?.beginRefreshing()
+        presenter?.loadData(refresh: true)
+    }
+    
+    func endRefresh(){
+        refreshControl?.endRefreshing()
     }
     
     // MARK: UITableViewDataSource
@@ -63,7 +85,7 @@ final class HomeViewController: UITableViewController, HomeViewProtocol {
         presenter?.showDetail(of: users[indexPath.row])
     }
     
-    // MARK: Spinner
+    // MARK: SPINNER
     func showSpinner() {
         spinner.startAnimating()
         spinner.frame = CGRect(origin: .zero, size: UIScreen.main.bounds.size)
@@ -76,7 +98,7 @@ final class HomeViewController: UITableViewController, HomeViewProtocol {
         spinner.removeFromSuperview()
     }
     
-    // MARK: Message
+    // MARK: MESSAGE
     func showAlertMessage(_ message:String, title:String = ""){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction( UIAlertAction(title: "Continuar", style: .default) { finish in

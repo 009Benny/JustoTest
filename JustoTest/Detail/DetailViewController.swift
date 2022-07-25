@@ -7,9 +7,10 @@
 
 import UIKit
 import Alamofire
+import MessageUI
 
-
-class DetailViewController: UIViewController {
+// This class is a view to specific user with buttons that can call to the user or send a email
+final class DetailViewController: UIViewController {
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var personalInfo: UILabel!
@@ -47,8 +48,8 @@ class DetailViewController: UIViewController {
             configGradientBackground(to: gradient)
         }
     }
-    //
     
+    // MARK: CONFIG UI
     func configUI(){
         title = "Perfil de \(user.name)"
         
@@ -64,14 +65,14 @@ class DetailViewController: UIViewController {
         stackView.setCustomSpacing(20, after: resume)
         imgProfile.layer.cornerRadius = imgProfile.bounds.width / 2
         imgProfile.clipsToBounds = true
-    
+        
         // SET CUSTOM DATA
         load(image: user.profilePicture.large)
         fullName.text = user.fullName
         personalInfo.text = "\(user.nationality) - \(user.age) años"
         resume.text = "Hola mi nombre es \(user.name) y estoy ofreciendo mis servicios a muy buen precio, pudes marcarme para mas información o enviarme un correo electronico"
     }
-
+    
     func load(image src:String){
         AF.request(src).responseData { response in
             guard let data = response.data else{
@@ -82,16 +83,27 @@ class DetailViewController: UIViewController {
         }
     }
     
+    // This method display a system alert with the option to cancel or call the number
     func callPhoneAction(){
-        if let url = URL(string: "tel://\(user.phone)"){
-            if UIApplication.shared.canOpenURL(url){
-                UIApplication.shared.open(url)
+        if let phoneCallURL = URL(string: "tel://\(user.phone.getOnlyNumbers())") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
             }
         }
     }
     
+    // This method comprobe if device can send email and if it can, then will present a mailView
     func sendEmail(){
-        // PENDING EMAIL
+        if user.email.isEmpty || !MFMailComposeViewController.canSendMail() {
+            print("Mail services are not available")
+            return
+        }
+        let mail = MFMailComposeViewController()
+        mail.mailComposeDelegate = self
+        mail.setToRecipients(["\(user.email)"])
+        print("Send email to \(user.email)")
+        navigationController?.present(mail, animated: true)
     }
     
     @IBAction func btnCallAction(_ sender: Any) {
@@ -100,5 +112,12 @@ class DetailViewController: UIViewController {
     
     @IBAction func btnSendEmail(_ sender: Any) {
         sendEmail()
+    }
+}
+
+// MARK: - MFMailComposeViewControllerDelegate
+extension DetailViewController:MFMailComposeViewControllerDelegate{
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        print(result)
     }
 }

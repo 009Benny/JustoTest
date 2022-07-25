@@ -10,6 +10,7 @@ import UIKit
 public class HomeRouter: HomeWireframeProtocol {
     weak var viewController: HomeViewController?
     
+    // Build HomeController with VIPER struct
     static func buildModule() -> UIViewController {
         let view = HomeViewController()
         let interactor = HomeInteractor()
@@ -23,6 +24,7 @@ public class HomeRouter: HomeWireframeProtocol {
         return view
     }
     
+    // Push a detail view to specific user
     func showDetail(of user: User) {
         viewController?.navigationController?.pushViewController(DetailViewController(user: user), animated: true)
     }
